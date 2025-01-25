@@ -7,5 +7,5 @@ router.post('/register', userController.register);
 router.post('/login', userController.login);
 router.get('/logout', userController.logOut);
 router.get('/profile',authMiddleware.userAuth,userController.profile);
-
+router.get('/',(req,res)=>{ res.send("connected")});
 module.exports = router;
